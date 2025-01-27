@@ -13,7 +13,7 @@ def progress_bar(task_name, total, prefix='', suffix='', length=40, fill='█'):
         bar = fill * filled_length + '-' * (length - filled_length)
         sys.stdout.write(f'\r{prefix} |{bar}| {percent:.2f}% {suffix}')
         sys.stdout.flush()
-        time.sleep(5 / total)  # Имитация времени загрузки (5 минут в сумме)
+        time.sleep(5 / total)
 
     sys.stdout.write('\n')
 
@@ -41,7 +41,6 @@ def fake_download():
     print("Opening ports and finalizing security settings...")
     progress_bar("Opening Ports", 60, prefix="Progress", suffix="Complete")
 
-    # Дополнительные этапы
     actions = [
         "Importing necessary libraries...",
         "Updating system packages...",
